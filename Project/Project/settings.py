@@ -126,5 +126,5 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-ALLOWED_HOSTS = ['0.0.0.8000', 'sachin.onrender.com']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+# ALLOWED_HOSTS = ['profile-5-u3qg.onrender.com', 'localhost', '127.0.0.1']
