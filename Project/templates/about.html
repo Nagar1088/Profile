@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<section class="container py-4">
+    <!-- Professional Journey Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="mb-4 pb-2 border-bottom">
+                <i class="fas fa-briefcase me-2 text-primary"></i>Professional Journey
+            </h2>
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-3 p-md-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-3">
+                        <div class="mb-2 mb-md-0">
+                            <h3 class="h5 mb-1">Junior Python Developer / Software Developer</h3>
+                            <div class="d-flex flex-wrap align-items-center">
+                                <span class="badge bg-primary me-2 mb-1">Mind Aviator Group</span>
+                                <small class="text-muted">2025 - Present</small>
+                            </div>
+                        </div>
+                        <i class="fas fa-laptop-code fs-4 text-muted"></i>
+                    </div>
+                    <ul class="list-unstyled mb-3">
+      <li class="mb-2">
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Developed secure REST APIs using Django REST Framework with JWT authentication
+</li>
+<li class="mb-2">
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Integrated third-party APIs and payment gateways into web applications
+</li>
+<li class="mb-2">
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Built full-stack web applications using Django, Python, HTML, CSS, and JavaScript
+</li>
+<li class="mb-2">
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Implemented data analysis and visualization using NumPy, Pandas, and Matplotlib
+</li>
+<li class="mb-2">
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Containerized applications using Docker for deployment
+</li>
+<li>
+    <i class="fas fa-circle text-primary small me-2"></i>
+    Collaborated with team members through code reviews and pair programming
+</li>
+                    </ul>
+                    <div class="mt-2">
+                        {% with tags="Python,Django,Docker" %}
+                            {% for tag in tags.split %}
+                                <span class="badge bg-light text-dark border me-1 mb-1">{{ tag }}</span>
+                            {% endfor %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education & Skills Row -->
+    <div class="row mb-4">
+        <!-- Education Column -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-3 p-md-4">
+                    <h2 class="mb-3 pb-2 border-bottom">
+                        <i class="fas fa-graduation-cap me-2 text-success"></i>Education
+                    </h2>
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-university fs-4 text-muted me-3"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h4 class="h5 mb-1">Bachelor's Of Technology</h4>
+                            <p class="mb-1 text-muted">Dr Ram Manohar Lohia Awadh University</p>
+                            <small class="text-muted">2019 - 2023 | Percentage : 76 %</small>
+                            <div class="mt-2">
+                                {% with tags="PythonDeveloper,SoftwareDeveloper" %}
+                                    {% for tag in tags.split %}
+                                        <span class="badge bg-light text-dark border me-1 mb-1">{{ tag }}</span>
+                                    {% endfor %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Column -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-3 p-md-4">
+                    <h2 class="mb-3 pb-2 border-bottom">
+                        <i class="fas fa-tools me-2 text-info"></i>Technical Arsenal
+                    </h2>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="small">Web Development:</span>
+                            <span class="small text-muted">90%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 90%"></div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="badge bg-light text-dark border me-1 mb-1">HTML/CSS/JS</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Django</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="small">Data Science:</span>
+                            <span class="small text-muted">85%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 85%"></div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="badge bg-light text-dark border me-1 mb-1">Python</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">NumPy</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Pandas</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="small">DevOps:</span>
+                            <span class="small text-muted">80%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 80%"></div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="badge bg-light text-dark border me-1 mb-1">Docker</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Security</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Payment Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mt-4 g-3">
+        <div class="col-6 col-md-3">
+            <div class="card border-0 shadow-sm h-100 text-center py-3">
+                <div class="card-body">
+                    <i class="fas fa-code fs-1 text-primary mb-2"></i>
+                    <h3 class="h5 mb-0">9 Months</h3>
+                    <small class="text-muted">Software Development Intern Experience</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card border-0 shadow-sm h-100 text-center py-3">
+                <div class="card-body">
+                    <i class="fas fa-project-diagram fs-1 text-success mb-2"></i>
+                    <h3 class="h5 mb-0">1 Project</h3>
+                    <small class="text-muted">Completed</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card border-0 shadow-sm h-100 text-center py-3">
+                <div class="card-body">
+                    <i class="fas fa-code-branch fs-1 text-info mb-2"></i>
+                    <h3 class="h5 mb-0">5+</h3>
+                    <small class="text-muted">Technologies</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card border-0 shadow-sm h-100 text-center py-3">
+                <div class="card-body">
+                    <i class="fas fa-certificate fs-1 text-warning mb-2"></i>
+                    <h3 class="h5 mb-0">3+</h3>
+                    <small class="text-muted">Certifications</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 0.5rem;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+    }
+    .border-bottom {
+        border-color: rgba(0,0,0,0.1)!important;
+    }
+    .progress {
+        border-radius: 4px;
+    }
+    .progress-bar {
+        border-radius: 4px;
+    }
+    @media (max-width: 768px) {
+        .card-body {
+            padding: 1rem;
+        }
+    }
+</style>
+{% endblock %}

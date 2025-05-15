@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Python Full Stack Developer{% endblock %}
+
+{% block content %}
+<!-- Interactive Hero Section -->
+<section class="hero-section text-white" style="background: linear-gradient(135deg, #6a11cb, #2575fc);">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-10 text-center text-lg-start">
+                <div class="hero-content py-3">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <span class="text-gradient">Python</span> &
+                        <span class="text-gradient">Django</span> Expert
+                    </h1>
+                    <p class="lead mb-4">Building Scalable Web Applications</p>
+                    <div class="d-flex flex-wrap gap-1 justify-content-center justify-content-lg-start">
+                        <a href="#projects" class="btn btn-primary btn-lg px-4 py-2">
+                            <i class="fas fa-laptop-code me-2"></i>View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="timeline-section py-4 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Professional Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content p-3 bg-white rounded shadow">
+                    <h4>Python Developer</h4>
+                    <div class="timeline-meta text-muted mb-2">
+                        <span>Mind Aviator Group (2025-Present)</span>
+                    </div>
+                    <ul class="timeline-desc ps-3">
+                        <li>Employee Management System</li>
+                        <li>Google Photos Filteration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills-section py-4 bg-info text-dark">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Development Skills</h2>
+        <div class="row g-3">
+            <div class="d-flex flex-column flex-md-row gap-3">
+                <div class="skill-card bg-primary p-3 rounded col-md-6 text-white">
+                    <h4 class="skill-title mb-2">
+                        <i class="fab fa-python me-2"></i>
+                        Backend Development
+                    </h4>
+                    <div class="skill-bar mb-3">
+                        <div class="skill-progress" style="width: 95%">
+                            <span class="progress-text">95%</span>
+                        </div>
+                    </div>
+                    <ul class="skill-tech list-unstyled ps-0">
+                        <li>Django REST Framework</li>
+                        <li>Optimizing MySQL Databases</li>
+                        <li>API Development</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-primary p-3 rounded col-md-6 text-white">
+                    <h4 class="skill-title mb-2">
+                        <i class="fab fa-python me-2"></i>
+                        Frontend Development
+                    </h4>
+                    <div class="skill-bar mb-3">
+                        <div class="skill-progress" style="width: 95%">
+                            <span class="progress-text">95%</span>
+                        </div>
+                    </div>
+                    <ul class="skill-tech list-unstyled ps-0">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .text-gradient {
+        background: linear-gradient(45deg, #3498db, #9b59b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .timeline-section, .skills-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .skill-bar {
+        height: 8px;
+        background: #2c3e50;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .skill-progress {
+        background: linear-gradient(90deg, #3498db, #9b59b6);
+        height: 100%;
+        position: relative;
+    }
+    .progress-text {
+        position: absolute;
+        right: 5px;
+        top: -20px;
+        font-size: 12px;
+    }
+    .timeline-content {
+        margin-left: 1.5rem;
+    }
+    .timeline-point {
+        width: 16px;
+        height: 16px;
+        background: #2575fc;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 8px;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Interactive Code Viewer
+    document.querySelectorAll('.code-snippet').forEach(snippet => {
+        snippet.addEventListener('click', () => {
+            navigator.clipboard.writeText(snippet.textContent);
+            showToast('Code copied to clipboard!');
+        });
+    });
+
+    function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'position-fixed bottom-0 end-0 p-3';
+        toast.innerHTML = `
+            <div class="toast show" role="alert">
+                <div class="toast-body">
+                    ${message}
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 2000);
+    }
+
+    function copyLink() {
+        var link = document.getElementById("live-link").href;
+        navigator.clipboard.writeText(link);
+        showToast('Link copied to clipboard!');
+    }
+</script>
+{% endblock %}

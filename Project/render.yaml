@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: authapp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn Project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: Project.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: DEBUG
+        value: False

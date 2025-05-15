@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | <span class="fw-bold">SACHIN NAGAR</span> - Full Stack Developer{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-white d-flex align-items-center justify-content-center" style="max-height: 50vh;">
+    <div class="animated-bg">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container text-center mt-2 position-relative" style="z-index: 1;">
+        <h1 class="display-6 display-lg-2 fw-bold mb-6 animate__animated animate__zoomIn">
+            <span class="text-gradient">Python</span> Developer
+        </h1>
+        <p class="lead fs-5 fs-lg-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
+           Expertise in Custom Web Applications & Scalable Software
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+            <a href="https://drive.google.com/file/d/1Pfbc-pZRwGo9EFyZbbvs45CgHrGVhVce/view?usp=drive_link" target="_blank" class="btn btn-lg btn-outline-light px-4 shadow">
+                <i class="fas fa-download me-2"></i> View Resume
+            </a>
+        </div>
+        <div class="mt-5 d-flex justify-content-center gap-4 animate__animated animate__fadeInUp animate__delay-3s">
+            <a href="https://github.com/Nagar1088" class="text-white fs-3" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sachin-nagar-ba9bb5212/" class="text-white fs-3" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-3">
+    <div class="container">
+        <h2 class="text-center mb-3">Tech Skills Overview</h2>
+        <ul class="nav nav-pills justify-content-center mb-5 flex-wrap" id="skillsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend" type="button" role="tab">Backend</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend" type="button" role="tab">Frontend</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="database-tab" data-bs-toggle="pill" data-bs-target="#database" type="button" role="tab">Database</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools" type="button" role="tab">Tools</button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Backend Tab -->
+            <div class="tab-pane fade show active" id="backend" role="tabpanel" aria-labelledby="backend-tab">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Backend Skills</h5>
+                        <div class="mt-2 d-flex flex-wrap justify-content-center gap-3">
+                            <i class="fab fa-python fs-3 text-warning" title="Python"></i>
+                            <i class="fab fa-django fs-3 text-dark" title="Django"></i>
+                            <i class="fab fa-react fs-3 text-info" title="Django Rest Framework (DRF)"></i>
+                            <i class="fas fa-credit-card fs-3 text-success" title="Payment Integration"></i>
+                            <i class="fas fa-plug fs-3 text-primary" title="API Integration"></i>
+                            <i class="fab fa-docker fs-3 text-info" title="Docker"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Tab -->
+            <div class="tab-pane fade" id="frontend" role="tabpanel" aria-labelledby="frontend-tab">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Frontend Skills</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-4">
+                            <i class="fab fa-html5 fs-3 text-danger" title="HTML5"></i>
+                            <i class="fab fa-css3-alt fs-3 text-primary" title="CSS3"></i>
+                            <i class="fab fa-js fs-3 text-warning" title="JavaScript"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database Tab -->
+            <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="database-tab">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Database Skills</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-4">
+                            <i class="fas fa-database fs-3 text-primary" title="MySQL"></i>
+                            <i class="fas fa-server fs-3 text-info" title="PostgreSQL"></i>
+                            <i class="fas fa-cloud fs-3 text-warning" title="SQLite3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Tab -->
+            <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="tools-tab">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tools & Technologies</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-4">
+                            <i class="fab fa-git fs-3 text-danger" title="Git"></i>
+                            <i class="fab fa-docker fs-3 text-info" title="Docker"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- CSS Styles -->
+<style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(-45deg, #43cea2, #185a9d, #43cea2, #185a9d);
+        background-size: 400% 400%;
+        animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .animated-bg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+        animation: float 10s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1) {
+        width: 100px; height: 100px;
+        left: 10%; top: 60%;
+        animation-delay: 0s;
+    }
+    .circle:nth-child(2) {
+        width: 80px; height: 80px;
+        left: 80%; top: 70%;
+        animation-delay: 2s;
+    }
+    .circle:nth-child(3) {
+        width: 120px; height: 120px;
+        left: 50%; top: 90%;
+        animation-delay: 4s;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) scale(1); opacity: 0.6; }
+        50% { transform: translateY(-30px) scale(1.1); opacity: 0.8; }
+        100% { transform: translateY(0) scale(1); opacity: 0.6; }
+    }
+
+    .text-gradient {
+        background: linear-gradient(90deg, #f12711, #f5af19);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #f12711; /* fallback */
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #ffc107;
+        color: #000;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 80vh;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+        }
+
+        .nav-pills .nav-link {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero-section h1 {
+            font-size: 2rem;
+        }
+
+        .btn-lg {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        .fs-3 {
+            font-size: 1.5rem !important;
+        }
+    }
+</style>
+
+<!-- JavaScript Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+{% endblock %}
